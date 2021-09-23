@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    color:#FFDD22;
+    background-color: #FF5555;
+    height: 100%;
+}
+
+address {
+    font-family:"georgia”,“serif";
+}
+
+ul {
+    list-style-type: disc;
+    color: #FFDD22
+}
+
+.font_especial {
+    font-family:"verdana","liberation";
+     color:#FFDD22
+}
+
+/* unvisited link */
+a:link {
+    color:#FFDD00;
+  }
+
+/* visited link */
+a:visited {
+    color: #FFBB00;
+  }
