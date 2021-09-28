@@ -9,7 +9,7 @@ header {
 
 section {
     display:block;
-    width: 76%;
+    width: 70%;
     float: right;
 }
 
@@ -17,7 +17,7 @@ body {
     color: #FFDD22;
     font-size: 18px;
     background-color: #FF5555;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", Georgia, serif;
 }
 
 a:link {
@@ -44,12 +44,11 @@ ul {
  */
 
 nav {
-    display:block;
-    width: 150px;
     float: left;
     margin-right: 10px;
    font-weight: bold;
-   font-family: 'Rubik', sans-serif;
+    width: 200px;
+   font-family: 'Rubik', Verdana, sans-serif;
 }
 
 nav ul {
@@ -69,7 +68,7 @@ nav ul {
     font-size: 14px;
     line-height: 140%;
 }
-img.imgLogo {
+.imgLogo {
     padding-bottom: 5px;
     border-bottom: 3px solid;
     margin-bottom: 6px;
@@ -80,7 +79,7 @@ img.imgLogo {
 *********** Estilo Seção - Apresentação
 */
 
-div.apres {
+.apres {
     text-align: center;
     font-size: 18px;
 }
@@ -89,9 +88,16 @@ div.apres {
 /* 
 *********** Estilo Seção - Mistura de Mel
 */
-.Titulo {
+.titulo {
     text-align: center;
 }
+
+.preco {
+    color:#EE0000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
 .listaComMel {
     color: #AA0000;
     width: 340px;
@@ -105,11 +111,7 @@ div.apres {
     color: #AA0000;
     list-style-type: square;
 }
-.preco {
-    color:#EE0000;
-    font-weight: bold;
-    vertical-align: middle;
-}
+
 
 
 /* 
@@ -117,10 +119,8 @@ div.apres {
 */
 .tabDabel {
     color: #000066;
-    font-size: 14px;
     margin: 6px auto 10px auto;
     border-collapse: collapse;
-    ;
    font-family: 'Rubik', verdana, sans-serif;
     background-color: #FFCC44;
 }
@@ -144,16 +144,11 @@ div.apres {
 .tabDabel .colTH {
     color: #FFFFFF;
     text-align: left;
-    background-color: o #2299DD;
+    background-color: #2299DD;
 }
 .tabDabel .imgDaBel {
     width: 70px;
     height: 70px;
-}
-.tabDabel .preco {
-    color: #EE0000;
-    font-weight: bold;
-    vertical-align: middle;
 }
 
 
@@ -164,11 +159,10 @@ div.apres {
     width: 550px;
     color: #2255AA;
     border: 2px solid #77CCDD;
-    margin: 20px auto;
+    margin: 20px auto 20px auto;
     padding: 6px 6px 15px 6px;
     background-color: #EEEEAA;
     font-size: 14px;
-    font-family: 'Muli', sans-serif;
 }
 
 .listaCompras {
@@ -209,10 +203,6 @@ div.apres {
 .botoes {
     text-align: right;
     margin: 20px 10px 0px 10px;
-}
-
-.botoes2 {
-    text-align: left;
 }
 
 .fsEsq {
@@ -256,7 +246,7 @@ div.apres {
 
 .colLabCrd {
     width: 260px;
-    height: 0px;
+    height: 40px;
     float: left;
 }
 
