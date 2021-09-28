@@ -1,30 +1,279 @@
-body {
-    margin: 0;
-    color:#FFDD22;
-    background-color: #FF5555;
-    height: 100%;
+ /* 
+*********** Estilo Geral
+*/
+
+header {
+    display:block;
+    margin-bottom: 1px;
 }
 
-address {
-    font-family:"georgia”,“serif";
+section {
+    display:block;
+    width: 76%;
+    float: right;
+}
+
+body {
+    color: #FFDD22;
+    font-size: 18px;
+    background-color: #FF5555;
+    font-family: 'Lato', sans-serif;
+}
+
+a:link {
+    color: #FFDD00;
+    text-decoration:none;
+}
+
+a:visited {
+    color: #FFBB00;
+    text-decoration:none;
+}
+
+ol {
+    line-height: 200%;
 }
 
 ul {
+    line-height: 200%;
+}
+
+
+/*
+*********** Estilo Nav 
+ */
+
+nav {
+    display:block;
+    width: 150px;
+    float: left;
+    margin-right: 10px;
+   font-weight: bold;
+   font-family: 'Rubik', sans-serif;
+}
+
+nav ul {
+    color: #FFDD22;
+    margin-top: 40px;
+    line-height: 230%;
     list-style-type: disc;
-    color: #FFDD22
 }
 
-.font_especial {
-    font-family:"verdana","liberation";
-     color:#FFDD22
+
+/* 
+*********** Estilo Header 
+*/
+.ender {
+    float: right;
+    text-align: right;
+    font-size: 14px;
+    line-height: 140%;
+}
+img.imgLogo {
+    padding-bottom: 5px;
+    border-bottom: 3px solid;
+    margin-bottom: 6px;
 }
 
-/* unvisited link */
-a:link {
-    color:#FFDD00;
-  }
 
-/* visited link */
-a:visited {
-    color: #FFBB00;
-  }
+/* 
+*********** Estilo Seção - Apresentação
+*/
+
+div.apres {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* 
+*********** Estilo Seção - Mistura de Mel
+*/
+.Titulo {
+    text-align: center;
+}
+.listaComMel {
+    color: #AA0000;
+    width: 340px;
+    border: 2px solid #000055;
+    margin: 0px auto 10px auto;
+    padding: 10px 10px 10px 50px;
+    background-color: #EECC88;
+    list-style-type: upper-roman;
+}
+.listaComMel ul {
+    color: #AA0000;
+    list-style-type: square;
+}
+.preco {
+    color:#EE0000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+/* 
+*********** Estilo Seção - Direto da Abelha
+*/
+.tabDabel {
+    color: #000066;
+    font-size: 14px;
+    margin: 6px auto 10px auto;
+    border-collapse: collapse;
+    ;
+   font-family: 'Rubik', verdana, sans-serif;
+    background-color: #FFCC44;
+}
+.tabDabel td, .tabDabel th {
+    border: 3px solid #226699;
+    padding: 6px 12px 6px 12px;
+}
+.tabDabel .titulo{
+    color: #FFFF00;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    background-color: #228855;
+}
+.tabDabel .linTH {
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #22AA55;
+}
+.tabDabel .colTH {
+    color: #FFFFFF;
+    text-align: left;
+    background-color: o #2299DD;
+}
+.tabDabel .imgDaBel {
+    width: 70px;
+    height: 70px;
+}
+.tabDabel .preco {
+    color: #EE0000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+/* 
+*********** Estilo Seção - Pedidos
+*/
+.divCompras {
+    width: 550px;
+    color: #2255AA;
+    border: 2px solid #77CCDD;
+    margin: 20px auto;
+    padding: 6px 6px 15px 6px;
+    background-color: #EEEEAA;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+}
+
+.listaCompras {
+    float: right;
+    width: 210px;
+    height: 160px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.colLabSelProd {
+    width: 230px;
+    height: 40px;
+    float: left;
+}
+
+.colSelProd {
+    width: 160px;
+    float: right;
+}
+
+.linhaProdSel {
+    float: left;
+    width: 220px;
+    margin-bottom: 6px;
+}
+
+.elemEsq {
+    float: left;
+    display:block;
+}
+
+.elemDir {
+    float: right;
+    display:block;
+}
+
+.botoes {
+    text-align: right;
+    margin: 20px 10px 0px 10px;
+}
+
+.botoes2 {
+    text-align: left;
+}
+
+.fsEsq {
+    float: left;
+    display: inline;
+    margin: 0px 0px 0px 0px;
+}
+.fsDir {
+    float: right;
+    display: inline;
+    margin: 0px 0px 0px 0px;
+}
+
+.inpGrande {
+    width: 380px;
+}
+.inpMedio {
+    width: 80px;
+}
+.inpNCC {
+    width: 130px;
+}
+.inpTelef {
+    width: 90px;
+}
+.inpEnder {
+    width: 180px;
+    height: 50px;
+}
+.numDD {
+    width:30px;
+}
+.numQD {
+    width:50px;
+}
+
+.divLinha {
+    width: 500px;
+    margin-bottom: 6px;
+}
+
+.colLabCrd {
+    width: 260px;
+    height: 0px;
+    float: left;
+}
+
+.colPri {
+    float: left;
+    width: 90px;
+    display: block;
+}
+
+.colPriCompras {
+    float: left;
+    width: 86px;
+    display: block;
+}
+
+.colPriPag {
+    float: left;
+    width: 250px;
+    display: block;
+}

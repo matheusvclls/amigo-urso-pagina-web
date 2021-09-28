@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Amigo Urso</title>
+      <base target="_blank" />
+      <link rel="stylesheet" type="text/css" href="../css/estilo.css" />
+   </head>
+   <body>
+      <header>
+         <address class="ender">
+            Rua Apis Mellifera, 16<br/>
+            Tel: (21) 91122-3344<br/>
+            <a href="mailto:contato@zangao.com.br">
+            contato@zangao.com.br</a>
+         </address>
+         <img class="imgLogo" src="../imgs/AmigoUrso_topo.png"/><br/>
+      </header>
+      <nav>
+         <ul>
+            <li><a href="1_Apresentacao.html">Apresentação</a></li>
+            <li><a href="2_Mistura_de_Mel.html">Mistura de Mel</a></li>
+            <li><a href="3_Direto_da_Abelha.html">Direto da Abelha</a></li>
+            <li><a href="4_Pedidos.html">Pedidos</a></li>
+         </ul>
+      </nav>
+      <section>
+         <form class="divCompras"method="POST">
+            <p  ><b>Compras</b></p>
+            <fieldset>
+               <legend> Identificação&nbsp;</legend>
+               <div class="divLinha">
+                  <label class="colPri">Nome: </label>
+                  <input type="text" class="inpGrande"
+                     name="TxtNomeCompleto" />
+               </div>
+               <div class="divLinha">
+                  <label for="idEmail" class="colPri">E-mail:</label>
+                  <input id="idEmail" class="inpGrande"
+                     type="email" name="TxtEmail" required />
+               </div>
+               <div class="divLinha">
+                  <label class="colPri">Endereço: </label>
+                  <textarea name="TxtEnder" class="inpEnder"></textarea>
+                  <fieldset class="fsDir">
+                     <legend>Genero:</legend>
+                     <label><input type="radio" name="TglSexo"
+                        value="M" checked />Mas</label>
+                     <label><input type="radio" name="TglSexo"
+                        value="F" />Fem</label>
+                     <label><input type="radio" name="TglSexo"
+                        value="O" />Outro</label>
+                  </fieldset>
+               </div>
+               <div class="divLinha">
+                  <fieldset class="fsDir">
+                     <legend>Nacimento:</legend>
+                     <input type="number" name="TxtDiaNasc"
+                        min="1" max="31" class="numDD" /> /
+                     <input type="number" name="TxtMesNasc"
+                        min="1" max="12" class="numDD" /> /
+                     <input type="number" name="TxtAnoNasc"
+                        min="1920" max="2002" class="numQD" />
+                  </fieldset>
+                  <p><label class="colPri">Telefone:</label>
+                     <input type="text" class="inpTelef"
+                        name="TxtTelefone" required />
+                  </p>
+                  <label class="colPri">Celular:</label>
+                  <input type="text" class="inpTelef"
+                     name="TxtCelular" />
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend> Seleção de Produtos e Pagamento&nbsp;</legend>
+               <label class="colLabSelProd" >
+                  <Select class="fsEsq" name="selTamanho" class="colSelProd" >
+                     <option>---</option>
+                     <optgroup label="Iogurte">
+                     <option >Natural com mel (150g)</option>
+                     <option >Zero Lactose (150g)</option>
+                     <optgroup label="Balas">
+                     <option >Gengibre e Mel (60g)</option>
+                     <option >Mel e Anis (60g)</option>
+                     <optgroup label="Barra de Cereal">
+                     <option >Mel e Granola (25g)</option>
+                     <optgroup label="Pote de Mel">
+                     <option >Mel Flores Silvestres (350g)</option>
+                     <option >Mel de Eucalipto (450g)</option>
+                     <option >Mel Flor de Laranjeira (750g)</option>
+                     <optgroup label="Própolis">
+                     <option >Extrato (30ml)</option>
+                     <option >Spray</option>
+                  </select>
+               </label>
+               <input type="submit" value="Comprar" class="fsEsq" />
+               <textarea class="listaCompras" name="listaPedidos"
+                  readonly>
+      </textarea>
+               <fieldset class="fsEsq">
+                  <legend> Cartão&nbsp;</legend>
+                  <label class="colLabCrd" >Bandeira:
+                  <label><input type="radio" name="RadBand" checked />Visa</label>
+                  <label><input type="radio" name="RadBand" />Master</label>
+                  <label><input type="radio" name="RadBand" />Elo</label>
+                  </label><br/>
+                  <p><label class="colLabCrd" for="mesVal">Validade:
+                     <input type="number" name="TxtMesVal" id="mesVal"
+                        min="1" max="12" class="numDD" value="10" /> /
+                     <input type="number" name="TxtAnoVal" value="2020"
+                        min="2020" max="2030" class="numQD" /></label>
+                  </p>
+                  <br/>
+                  <p>
+                     <label class="colLabCrd" for="numCar">Número:
+                     <input type=text name="TxtNumCard"
+                        class="inpNCC" id="numCar"/></label>
+                  </p>
+                  <br/>
+               </fieldset>
+               <label class="elemDir" class="fsDir" for="TxtTotal"><br/>Valor R$
+               <input type="text" name="TxtTotal" readonly
+                  id="TxtTotal" class="inpMedio" /></label>
+            </fieldset>
+            </fieldset>
+            <div class="botoes">
+               <input type="submit" value="Enviar" />
+               <input type="reset" value="Limpar" />
+            </div>
+         </form>
+      </section>
+   </body>
+</html>
