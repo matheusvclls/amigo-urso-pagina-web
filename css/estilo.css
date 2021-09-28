@@ -44,11 +44,12 @@ ul {
  */
 
 nav {
+    display:block;
     float: left;
     margin-right: 10px;
-   font-weight: bold;
+    font-weight: bold;
     width: 200px;
-   font-family: 'Rubik', Verdana, sans-serif;
+    font-family: 'Rubik', Verdana, sans-serif;
 }
 
 nav ul {
