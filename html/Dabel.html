@@ -10,6 +10,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
    </head>
    <body>
+
       <header>
          <address class="ender">
             Rua Apis Mellifera, 16<br/>
@@ -27,55 +28,60 @@
             <li><a href="Pedidos.html">Pedidos</a></li>
          </ul>
       </nav>
+      <script>
+         var tabModelos = [
+         ["", "Vazio", 0],
+         ["Flores Silvestres", "CoberturaComprida100", 360],
+         ["Eucalipto", "CoberturaPoliprop100", 260],
+         ["Flor de Laranjeira", "CoberturaTriangular100", 300],
+         ["Extrato", "ToldoFixo100", 320],
+         ["Spray", "Spray100", 350] ];
+         function Mostra(tp, ind) {
+         var titu = document.getElementById("titDes");
+         var foto = document.getElementById("imgDes");
+         var prec = document.getElementById("prcDes");
+         var tipo = ["Pote de Mel", "Própolis"];
+         titu.innerHTML = "<h2>" + tipo[tp] + "<br/>"
+         + tabModelos[ind][0] + "</h2><br/>";
+         foto.src = "../imgs/" + tabModelos[ind][1] + ".jpg";
+         prec.innerHTML = "<br/>Preço: R$ <span class='preco'>" +
+         tabModelos[ind][2] + ",00</span>";
+         }
+         </script>
       <section>
+         <br/>
+         <h3 class="Titulo">Direto da Abelha</h3>
          <table class="tabDabel">
-            </tr>
-            <tr>
-               <th colspan="4" class="titulo">Produtos Direto da Abelha</th>
-            </tr>
-            <tr>
-               <th class="linTH">Produto</th>
-               <th class="linTH">Descrição</th>
-               <th class="linTH" >Fotos</th>
-               <th class="linTH">Preço</th>
-            </tr>
-            <tr>
-               <th rowspan="3" class="colTH">
-                  Pote de Mel
-               </th>
-               </td>
-               <td>Mel Flores Silvestres (350g)</td>
-               <td class="imgDaBel" ><img
-                  src="../imgs/MelSilvestre100.jpg" />
-               <td class="preco">R$ 20,00</td>
-            <tr>
-               <td>Mel de Eucalipto (450g)</td>
-               <td class="imgDaBel" ><img
-                  src="../imgs/MelEucalipto100.jpg" /> 
-               <td class="preco">R$ 25,00</td>
-            </tr>
-            <tr>
-               <td>Mel Flor de Laranjeira (750g)</td>
-               <td class="imgDaBel" >
-                  <img src="../imgs/MelLaranja100.jpg" />
-               <td class="preco">R$ 40,00</td>
-            </tr>
-            <tr>
-               <th rowspan="3" class="colTH">
-                  Própolis
-               </th>
-               </td>
-               <td>Extrato (30ml)</td>
-               <td class="imgDaBel" ><img
-                  src="../imgs/Spray100.jpg" />
-               <td class="preco">R$ 16,00</td>
-            <tr>
-               <td>Spray</td>
-               <td class="imgDaBel" ><img
-                  src="../imgs/Spray100.jpg" />
-               <td class="preco">R$ 9,00</td>
-            </tr>
+         </tr>
+         <tr>
+            <th colspan="4" class="titulo">Produtos Direto da Abelha</th>
+         </tr>
+         <tr><th class="linTH">Produto</th>
+         <th class="linTH">Tipo</th>
+         <th class="linTH">Descrição</th></tr>
+         <tr><th rowspan="3" class="colTH">
+         Pote de Mel</th></td>
+         <td><a target="_self" href=
+         "javascript:Mostra(0, 1);">Flores Silvestres</a></td>
+         <td class="imgCel" rowspan="6">
+         <div id="titDes"><h2>&nbsp;<br/>&nbsp;</h2>
+         </div><img id="imgDes"
+         src="../imgs/vazio.jpg" />
+         <div id="prcDes">&nbsp;
+         </div>
+         </td></tr>
+         <tr><td><a target="_self" href=
+         "javascript:Mostra(0, 2);">Eucalipto</a></td></tr>
+         <tr><td><a target="_self" href=
+         "javascript:Mostra(0, 3);">Flor de Laranjeira</a></td></tr>
+         <tr><th rowspan="3" class="colTH">
+         Própolis</th></td>
+         
+         <td><a target="_self" href=
+         "javascript:Mostra(1, 4);">Extrato</a></td></tr>
+         <tr><td><a target="_self" href=
+         "javascript:Mostra(1, 5);">Spray</a></td></tr>
          </table>
-      </section>
+         </section>
    </body>
 </html>

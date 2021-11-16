@@ -113,7 +113,32 @@ nav ul {
     list-style-type: square;
 }
 
+.listaComMel a {
+    color: #AA0000
+}
 
+/* 
+*********** Estilo Seção - Janela de informações
+*/
+
+.janInfo {
+    width: 300px;
+    color: #AA0000;
+    font-family: 'Rubik', verdana, sans-serif;
+    background-color: #EECC88;
+    border: 2px solid #000055;
+}
+
+.janInfoImg {
+    margin: 30px, 30px, 30px, 30px;
+    border: 2px solid #000055;
+    background-color: white;
+}
+
+.janInfoDetalhe {
+    text-align: left;
+    margin: 20px, 20px,20px,20px;
+}
 
 /* 
 *********** Estilo Seção - Direto da Abelha
@@ -128,6 +153,7 @@ nav ul {
 .tabDabel td, .tabDabel th {
     border: 3px solid #226699;
     padding: 6px 12px 6px 12px;
+    height: 40px;
 }
 .tabDabel .titulo{
     color: #FFFF00;
@@ -150,8 +176,33 @@ nav ul {
 .tabDabel .imgDaBel {
     width: 70px;
     height: 70px;
+
 }
 
+.tabDabel .imgCel {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.tabDabel a {
+    color: #AA0000
+}
+
+#titDes {
+    height: 60px;
+}
+
+#proDes {
+    height: 40px;
+}
+
+#imgDes {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #226699;
+    background-color: white;
+    padding: 4px,4px,4px,4px;
+}
 
 /* 
 *********** Estilo Seção - Pedidos

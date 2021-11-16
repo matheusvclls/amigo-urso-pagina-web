@@ -9,6 +9,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
 
+
+      
    </head>
    <body>
       <header>
@@ -29,27 +31,90 @@
          </ul>
       </nav>
       <section>
-         <h3 class="titulo">Mistura de Mel</h3>
+         <h3 class="Titulo">Mistura de Mel</h3>
          <ol class="listaComMel">
-            <li>
-               Iogurte:
-               <ul>
-                  <li>Natural com mel (150g) - <span class="preco">R$ 2,50</span></li>
-                  <li>Zero lactose (150g) - <span class="preco">R$ 3,00</span></li>
-               </ul>
-            <li>
-               Balas:
-               <ul>
-                  <li>Gengibre e mel(60g) - <span class="preco">R$ 6,00</span></li>
-                  <li>Mel e Anis (60g) - <span class="preco">R$ 6,00</span></li>
-               </ul>
-            <li>
-               Barra de Cereal:
-               <ul>
-                  <li>Mel e Granola (25g) - <span class="preco">R$ 1,50</span></li>
-               </ul>
-            </li>
+         <li><a target="_self"
+         href="javascript:MostraMat(0);">Iogurte Natural com Mel</li>
+         <li><a target="_self"
+         href="javascript:MostraMat(1);">Iogurte Zero Lactose</li>
+         <li><a target="_self"
+         href="javascript:MostraMat(2);">Balas de Gengibre e Mel</li>
+         <li><a target="_self"
+         href="javascript:MostraMat(3);">Balas de Mel e Anis</li>
+         <li><a target="_self"
+         href="javascript:MostraMat(4);">Barra de Cereal de Mel e Granola</li>
          </ol>
-      </section>
+         </section>
+
+         <script>
+            var tabMateriais = new Array(6);
+            tabMateriais[0] = [ "Iogurte Natural com Mel",
+            "Natural com Mel",
+            "IogurteNatMel100",
+            "150g",
+            "2,50"];
+            
+            tabMateriais[1] = [ "Iogurte Zero Lactose",
+            "Zero Lactose",
+            
+            "Iogurtezerolac100",
+
+            "150g",
+            
+            "3,00"];
+            
+            tabMateriais[2] = [ "Balas de Gengibre e Mel",
+            "Gengibre e mel",
+            "BalaGengibre100",
+            "60g",
+            "6,00"];
+            
+            tabMateriais[3] = [ "Balas de Mel e Anis",
+            "Mel e Anis",
+            "BalaAnis100",
+            "60g",
+            "6,00"];
+
+            tabMateriais[4] = [ "Barra de Cereal de Mel e Granola",
+            "Mel e Granola",
+            "BarraGranAveiaMel100",
+            "25g",
+            "1,50",
+         ];
+            
+            function MostraMat(tipo) {
+            var jan = open("", tabMateriais[tipo][0],
+            "location=no,status=no," +
+            "width=290,height=390");
+            
+            with (jan.document) {
+            write("<!DOCTYPE html>");
+            write("<html><head><title>Amigo Urso</title>");
+            write("<link rel='stylesheet' type='text/css'");
+            write(" href='../css/estilo.css'>");
+            write("</head><body>");
+            write("<div class='janInfo'>");
+            write("<h2>", tabMateriais[tipo][0], "</h2></div>");
+            write("<div class='janInfoImg'>");
+            write("<p><img src='../imgs/",
+            tabMateriais[tipo][2], ".jpg' /></p></div>");
+            write("<div class='janInfoDetalhe'>");
+            write("<div><p>Tipo: ", tabMateriais[tipo][1], "</p>" );
+            write("<p>Qtd: ", tabMateriais[tipo][3], "</p>");
+            write("<p>Preço: R$ ");
+            write("<span class='precoMQ'>");
+            write(tabMateriais[tipo][4], "</p></spn></div>" );
+            write("<form class='janInfo'>");
+            write("<input type='button' value='Fechar' ");
+            write("onClick='window.close();'/>");
+            write("</form>");
+            write("</body></html>");
+            close();
+            }
+            }
+            </script>
+
+
+      
    </body>
 </html>
