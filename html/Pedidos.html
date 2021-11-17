@@ -35,6 +35,30 @@
          }
          return true;
          }
+
+
+   /*
+* Lista de Compras
+*/
+var tabPrcProd = [ 0, 8,8,6,6,5,20,25,40,16,9
+];
+
+function IncluiLista( sel ) {
+var prod = sel.selectedIndex;
+if ( prod != 0 ) {
+var prc = tabPrcProd[prod];
+sel.selectedIndex = 0;
+if( isNaN(parseInt(TxtTotal.value)) ){TxtTotal.value = 0
+}
+
+with ( sel.form ) {
+listaPedidos.value += sel.options[prod].text + '\n';
+TxtTotal.value = prc + parseInt(TxtTotal.value);
+}
+}
+else
+alert("Nenhum Produto selecionado!");
+}
          </script>
 
       <header>
@@ -92,14 +116,14 @@
                      <input type="number" name="TxtAnoNasc"
                         min="1920" max="2002" class="numQD" />
                   </fieldset>
-<p><label class="colPri">Telefone:</label>
-<input type="text" class="inpTelef"
-onChange="VerificaTelef(this, 8);"
-name="Telefone" required /></p>
-<label class="colPri">Celular:</label>
-<input type="text" class="inpTelef"
-onChange="VerificaTelef(this, 9);"
-name="Celular" />
+               <p><label class="colPri">Telefone:</label>
+               <input type="text" class="inpTelef"
+               onChange="VerificaTelef(this, 8);"
+               name="Telefone" required /></p>
+               <label class="colPri">Celular:</label>
+               <input type="text" class="inpTelef"
+               onChange="VerificaTelef(this, 9);"
+               name="Celular" />
                </div>
             </fieldset>
             <fieldset>
@@ -124,7 +148,7 @@ name="Celular" />
                      <option >Spray</option>
                   </select>
                </label>
-               <input type="submit" value="Comprar" class="fsEsq" />
+               <input class="elemEsq" type="button" value="Comprar" onClick="IncluiLista( this.form.selProduto );" />
                <textarea class="listaCompras" name="listaPedidos"
                   readonly>
       </textarea>
