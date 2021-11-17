@@ -11,6 +11,56 @@
 
    </head>
    <body>
+
+      <script>
+         function VerificaTelef( campo, tam ) {
+         var i, c;
+         var strTel = campo.value;
+         if ( strTel.length != tam ) {
+         alert(campo.name
+         + " tem de ter " +
+         tam + " dígitos!");
+         return false;
+         }
+         for ( i = 0; i < tam; i++ ) {
+         c = strTel.charAt(i);
+         if ( (c < '0') || (c > '9')) {
+         alert(campo.name
+         + " só pode ter" +
+         " dígitos, caracter '" +
+         c + "' inválido!");
+         
+         return false;
+         }
+         }
+         return true;
+         }
+
+
+   /*
+* Lista de Compras
+*/
+var tabPrcProd = [ 0, 8,8,6,6,5,20,25,40,16,9
+];
+
+function IncluiLista( sel ) {
+var prod = sel.selectedIndex;
+if ( prod != 0 ) {
+var prc = tabPrcProd[prod];
+sel.selectedIndex = 0;
+if( isNaN(parseInt(TxtTotal.value)) ){TxtTotal.value = 0
+}
+
+with ( sel.form ) {
+listaPedidos.value += sel.options[prod].text + '\n';
+TxtTotal.value = prc + parseInt(TxtTotal.value);
+}
+}
+else
+alert("Nenhum Produto selecionado!");
+}
+         </script>
+
       <header>
          <address class="ender">
             Rua Apis Mellifera, 16<br/>
@@ -66,13 +116,14 @@
                      <input type="number" name="TxtAnoNasc"
                         min="1920" max="2002" class="numQD" />
                   </fieldset>
-                  <p><label class="colPri">Telefone:</label>
-                     <input type="text" class="inpTelef"
-                        name="TxtTelefone" required />
-                  </p>
-                  <label class="colPri">Celular:</label>
-                  <input type="text" class="inpTelef"
-                     name="TxtCelular" />
+               <p><label class="colPri">Telefone:</label>
+               <input type="text" class="inpTelef"
+               onChange="VerificaTelef(this, 8);"
+               name="Telefone" required /></p>
+               <label class="colPri">Celular:</label>
+               <input type="text" class="inpTelef"
+               onChange="VerificaTelef(this, 9);"
+               name="Celular" />
                </div>
             </fieldset>
             <fieldset>
@@ -97,7 +148,7 @@
                      <option >Spray</option>
                   </select>
                </label>
-               <input type="submit" value="Comprar" class="fsEsq" />
+               <input class="elemEsq" type="button" value="Comprar" onClick="IncluiLista( this.form.selProduto );" />
                <textarea class="listaCompras" name="listaPedidos"
                   readonly>
       </textarea>
