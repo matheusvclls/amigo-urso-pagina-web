@@ -130,14 +130,23 @@ nav ul {
 }
 
 .janInfoImg {
-    margin: 30px, 30px, 30px, 30px;
-    border: 2px solid #000055;
+    margin: 30px;
+    border: 2px solid  #000055;
     background-color: white;
+    text-align: center;
 }
 
 .janInfoDetalhe {
     text-align: left;
-    margin: 20px, 20px,20px,20px;
+    margin: 20px;
+}
+
+.janInfo h2 {
+    text-align: center;}
+
+.fechar{
+    text-align:center;
+    margin: 0 auto;
 }
 
 /* 

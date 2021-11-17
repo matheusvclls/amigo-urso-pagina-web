@@ -92,9 +92,9 @@
             write("<html><head><title>Amigo Urso</title>");
             write("<link rel='stylesheet' type='text/css'");
             write(" href='../css/estilo.css'>");
-            write("</head><body>");
-            write("<div class='janInfo'>");
-            write("<h2>", tabMateriais[tipo][0], "</h2></div>");
+            write("</head><body class='janInfo'>");
+            write("<div >");
+            write("<h2 >", tabMateriais[tipo][0], "</h2></div>");
             write("<div class='janInfoImg'>");
             write("<p><img src='../imgs/",
             tabMateriais[tipo][2], ".jpg' /></p></div>");
@@ -102,10 +102,10 @@
             write("<div><p>Tipo: ", tabMateriais[tipo][1], "</p>" );
             write("<p>Qtd: ", tabMateriais[tipo][3], "</p>");
             write("<p>Preço: R$ ");
-            write("<span class='precoMQ'>");
-            write(tabMateriais[tipo][4], "</p></spn></div>" );
-            write("<form class='janInfo'>");
-            write("<input type='button' value='Fechar' ");
+            write("<span class='preco'>");
+            write(tabMateriais[tipo][4], "</p></span></div>" );
+            write("<form class='fechar'>");
+            write("<input  type='button' value='Fechar' ");
             write("onClick='window.close();'/>");
             write("</form>");
             write("</body></html>");
